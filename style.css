@@ -1,22 +1,22 @@
 .jumbotron {
     padding-top: 6rem;
-    background-color: rgb(45, 45, 45);
-    color: rgba(255, 255, 255, 0.9);
+    background-color: #EAFDFC;
+    color: rgba(0, 0, 0, 0.9);
 }
 
-#about {
-    background-color: rgb(30, 30, 30);
-    color: rgba(255, 255, 255, 0.9);
+#section1 {
+    background-color: #BFEAF5;
+    color: rgba(0, 0, 0, 0.9);
 }
 
-#skill {
-    background-color: rgb(45, 45, 45);
-    color: rgba(255, 255, 255, 0.9);
+#section2 {
+    background-color: #91D8E4;
+    color: rgba(0, 0, 0, 0.9);
 }
 
-#contact {
-    background-color: rgb(30, 30, 30);
-    color: rgba(255, 255, 255, 0.9);
+#section2 {
+    background-color: #82AAE3;
+    color: rgba(0, 0, 0, 0.9);
 }
 
 section {

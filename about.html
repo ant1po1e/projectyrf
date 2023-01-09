@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body id="home">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="https://ant1po1e.vercel.app"><b>Personal Web</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html"><i class="bi bi-house"></i>&nbsp;
+                            Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="bi bi-file-person"></i>&nbsp; About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skill"><i class="bi bi-patch-check"></i>&nbsp; </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact"><i class="bi bi-person-lines-fill"></i>&nbsp; Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false"><i class="bi bi-plus-circle"></i>&nbsp;
+                            Others
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="cv.pdf" target="blank"><i
+                                        class="bi bi-file-earmark-person"></i>&nbsp;
+                                    More Information</a>
+                            </li>
+                        </ul>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navber-END -->
+
+    <!--  -->
+    <!--  -->
+
+    <!--  -->
+    <!--  -->
+
+    <!--  -->
+    <!--  -->
+
+    <!--  -->
+    <!--  -->
+
+    <!-- Footer -->
+    <footer class="text-white text-center pb-5 pt-5 bg-dark">
+        <p>Copyright &copy; 2022 <a href="https://www.twitter.com/4nt1p01e" class="text-white fw-bold"
+                target="blank">Ant1po1e</a> and YRF Team</p>
+        </div>
+
+    </footer>
+    <!-- Footer-END -->
+
+    <!-- Bootsrrap CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
+
+    <!-- Java Form Script -->
+    <script>
+        const scriptURL =
+            "https://script.google.com/macros/s/AKfycbx0eCzzKaKtZ2gIwprnJ-5xtkpoM0kqcLv5uoVVUVZZMgIsJ6Fn6YHJ5OzUIOcpIcJV/exec";
+        const form = document.forms["Ant1po1e-contact-form"];
+        const btnSend = document.querySelector(".btn-send");
+        const btnLoading = document.querySelector(".btn-loading");
+        const myAlert = document.querySelector(".alert");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            btnLoading.classList.toggle("d-none");
+            btnSend.classList.toggle("d-none");
+            fetch(scriptURL, {
+                    method: "POST",
+                    body: new FormData(form),
+                })
+                .then((response) => {
+                    btnLoading.classList.toggle("d-none");
+                    btnSend.classList.toggle("d-none");
+                    myAlert.classList.toggle("d-none");
+                    form.reset();
+                    console.log("Success!", response);
+                })
+                .catch((error) => console.error("Error!", error.message));
+        });
+    </script>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css" />
+</body>
+
+</html>
